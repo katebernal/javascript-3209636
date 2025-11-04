@@ -1,58 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Póster interactivo</title>
+<link rel="stylesheet" href="css.css">
 </head>
-<section>
-    <div  class="background">
-
-    <img src="/juego flapi/luigi.webp" class="mario animable" alt="luigi">
-
-    <img src="juego flapi/hongo.png" class="goomba animable" alt="hongo">
-
-    <img src="/juego flapi/moneda.png" class="coin clickable coin1" alt="Moneda 1">
-    <img src="/juego flapi/moneda1.png" class="coin clickable coin2" alt="Moneda 2">
-    <img src="/juego flapi/bloque.png" class="block clickable block1" alt="Bloque 1">
-    <img src="/juego flapi/bloque2.png" class="block clickable block2" alt="Bloque 2">
-
-    <div class="contador">Puntaje: <span id="score">0</span></div>
-     <script src="juego.js"></script>
-  </div>
-   </section>
-
 <body>
-    
+
+
+<div class="escenas-wrapper">
+  <div class="game-container section1 escena">
+  <img src="/juego flapi/fondo.webp" class="background" alt="Fondo 1">
+  <img src="/juego flapi/hongo.png" class="nube animable" alt="Nube">
+  <img src="/juego flapi/luigi.webp" class="tubo animable" alt="Tubo">
+  <img src="/juego flapi/cuadro2.png" class="bloque clickable bloque-a" alt="Bloque A">
+  <img src="/juego flapi/cuadro3.png" class="bloque clickable bloque-b" alt="Bloque B">
+  <img src="/juego flapi/cuadro4.png" class="bloque clickable bloque-c" alt="Bloque C">
+  <img src="/juego flapi/bloque.png" class="bloque clickable bloque-d" alt="Bloque D">
+
+  <div class="score-board">Puntaje: <span class="score">0</span></div>
   </div>
 
-
-   <section>
-    <div  class="fondo">
-
-    <img src="/juego flapi/muñeca.webp" class="mario animable" alt="muñeca">
-
-    <img src="/juego flapi/muñeco.webp" class="goomba animable" alt="muñeco">
-
-    <img src="/juego flapi/diamante1.png" class="coin clickable coin1" alt="diamante 1">
-    <img src="/juego flapi/diamante2.png" class="coin clickable coin2" alt="diamante 2">
-    <img src="/juego flapi/diamante3.png" class="coin clickable coin3" alt="diamante 3">
-    <img src="/juego flapi/cuadro2.png" class="block clickable block1" alt="cuadro 2">
-    <img src="/juego flapi/cuadro3.png" class="block clickable block2" alt="cuadro 3">
-
-    <div class="contador">Puntaje: <span id="score">0</span></div>
-  </div>
-   </section>
-
-   
-   
-
+  <div class="game-container section2 escena">
+  <img src="/juego flapi/fondo1.png" class="background" alt="Fondo 2">
+  <img src="/juego flapi/muñeco.webp" class="banderas animable" alt="Banderas">
+  <img src="/juego flapi/muñeca.webp" class="carro animable" alt="Carro">
 
   
-   
-    
+  <img src="/juego flapi/diamante1.png" class="conoo clickable conoo-1" alt="Cono 1">
+  <img src="/juego flapi/diamante2.png" class="conoo clickable conoo-2" alt="Cono 2">
+  <img src="/juego flapi/cuadro2.png" class="conoo clickable conoo-3" alt="Cono 3">
+  <img src="/juego flapi/cuadro4.png" class="conoo clickable conoo-4" alt="Cono 4">
+
+  <div class="score-board">SCORE: <span class="score">0</span></div>
+  </div>
+
+  <div class="game-container section3 escena">
+  <img src="img/fondo3.png" class="background" alt="Fondo 3">
+  <img src="img/cubo.png" class="cubo animable" alt="Cubo">
+  <img src="img/chuzos.png" class="chuzos animable" alt="Chuzos">
+
+  
+  <img src="img/rollito.png" class="rollito clickable roll-1" alt="Rollito 1">
+  <img src="img/rollito.png" class="rollito clickable roll-2" alt="Rollito 2">
+  <img src="img/rollito.png" class="rollito clickable roll-3" alt="Rollito 3">
+  <img src="img/rollito.png" class="rollito clickable roll-4" alt="Rollito 4">
+
+  <div class="score-board">POINTS: <span class="score">0</span></div>
+  </div>
+
+  
+  <button class="btn-anterior" aria-label="Anterior">‹</button>
+  <button class="btn-siguiente" aria-label="Siguiente">›</button>
+
+  
+  <div class="miniaturas">
+    <img src="/juego flapi/fondo.webp" class="miniatura" data-index="0" alt="Mini 1">
+    <img src="/juego flapi/fondo1.png" class="miniatura" data-index="1" alt="Mini 2">
+    <img src="img/fondo3.png" class="miniatura" data-index="2" alt="Mini 3">
+  </div>
+
+</div>
+
+
+
+
+<script src="juego.js"></script>
+
+
 </body>
 </html>
+
 
 
 

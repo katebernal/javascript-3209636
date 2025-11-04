@@ -1,107 +1,312 @@
-section {
- display: flex;
+body {
+  background-color: rgba(0, 51, 145, 0.945);
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-
+  flex-direction: column;
+  gap: 24px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.background {
+.game-container {
   position: relative;
   width: 750px;
   height: 500px;
-  background-image: url('juego\ flapi/fondo1.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
+  border: 5px solid rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-sizing: border-box;
 }
 
-
-.mario {
+.background {
   position: absolute;
-  bottom: 60px;
-  left: 100px;
-  width: 80px;
-  animation: moveMario 4s linear infinite alternate;
-  z-index: 2;
-}
-
-.goomba {
-  position: absolute;
-  bottom: 60px;
-  right: 100px;
-  width: 60px;
-  animation: moveGoomba 3s linear infinite alternate;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 500px;
+  object-fit: cover;
+  z-index: 0;
 }
 
 
 .clickable {
   position: absolute;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, opacity 0.4s ease;
+}
+.clickable:hover { transform: scale(1.08); }
+
+.fade-out {
+  opacity: 0 !important;
+  transform: scale(0.6) !important;
+  pointer-events: none;
 }
 
-.coin {
-  width: 40px;
-}
-
-.block {
-  width: 60px;
-}
-
-.coin1 { top: 100px; left: 150px; }
-.coin2 { top: 150px; right: 200px; }
-.block1 { top: 250px; left: 300px; }
-.block2 { top: 250px; right: 280px; }
-
-.clickable:hover {
-  transform: scale(1.2);
-}
-
-.contador {
+.score-board {
   position: absolute;
   top: 15px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 8px 15px;
+  padding: 8px 12px;
   border-radius: 8px;
-  font-family: Arial, sans-serif;
   font-weight: bold;
-  z-index: 5;
+  z-index: 6;
 }
 
 
-@keyframes moveMario {
-  0% { left: 100px; }
-  100% { left: 550px; }
+.section1 .nube {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 4;
+  animation: moveNube 5s ease-in-out infinite alternate;
+}
+.section1 .tubo {
+  position: absolute;
+  bottom: 0px;
+  right: 100px;
+  width: 120px;
+  z-index: 3;
+  animation: moveTubo 4s ease-in-out infinite;
+}
+.section1 .bloque { 
+  width: 60px; 
+  z-index: 3; 
+}
+.section1 .bloque-a { 
+  top: 100px; 
+  left: 150px;
+ }
+.section1 .bloque-b {
+   top: 100px; 
+  left: 220px; 
+}
+.section1 .bloque-c {
+   top: 220px; 
+   left: 220px; 
+  }
+.section1 .bloque-d { top: 240px; 
+  left: 420px;
+ }
+.section1 .score-board {
+   background: rgb(177, 0, 0); 
+  color: #fff; }
+
+@keyframes moveNube {
+  0% { transform: translateX(-50%) translateX(-140px); }
+  50% { transform: translateX(-50%) translateX(140px); }
+  100% { transform: translateX(-50%) translateX(-140px); }
+}
+@keyframes moveTubo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes moveGoomba {
-  0% { right: 100px; }
-  100% { right: 550px; }
+
+.section2 .banderas {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  z-index: 4;
+  animation: moveBanderas 6s ease-in-out infinite alternate;
+}
+.section2 .carro {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 80px;
+  z-index: 3;
+  animation: moveCarro 5s ease-in-out infinite;
+}
+.section2 .conoo {
+   width: 90px; 
+   z-index: 3;
+   }
+.section2 .conoo-1 { 
+  top: 250px; 
+  left: 100px;
+ }
+.section2 .conoo-2 { 
+  top: 200px; 
+  left: 330px;
+ }
+.section2 .conoo-3 { 
+  top: 210px; 
+  left: 450px; 
+}
+.section2 .conoo-4 { 
+  left: 100px;
+  width: 80px;
+
+ }
+.section2 .score-board {
+   background: rgb(0, 150, 74);
+    color: #fff; 
+  }
+
+@keyframes moveBanderas {
+  0% { transform: translateX(-50%) translateX(-120px); }
+  50% { transform: translateX(-50%) translateX(120px); }
+  100% { transform: translateX(-50%) translateX(-120px); }
+}
+@keyframes moveCarro {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
 
+.section3 .cubo {
+  position: absolute;
+  top: 100px;
+  left: 335px;
+  width: 100px;
+  z-index: 3;
+  animation: moveCubo 3s ease-in-out infinite alternate;
+}
+.section3 .chuzos {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 4;
+  animation: moveChuzos 4s ease-in-out infinite;
+}
+.section3 .rollito {
+   width: 90px;
+    z-index: 3;
+   }
+.section3 .roll-1 { top: 65px;
+   left: 55px; 
+  }
+.section3 .roll-2 { 
+  top: 350px; 
+  left: 100px; 
+}
+.section3 .roll-3 { 
+  top: 210px; 
+  left: 450px; 
+}
+.section3 .roll-4 { 
+  top: 210px; 
+  left: 210px;
+ }
+.section3 .score-board {
+   background: rgb(212, 120, 0);
+    color: #fff; 
+  }
 
-
-section {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-
+@keyframes moveCubo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+@keyframes moveChuzos {
+  0% { transform: translateX(-50%) translateX(-80px); }
+  50% { transform: translateX(-50%) translateX(80px); }
+  100% { transform: translateX(-50%) translateX(-80px); }
 }
 
-.fondo {
-  position: relative;
-  width: 750px;
-  height: 500px;
-  background-image: url('/juego\ flapi/fondo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.game-container .flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 48px;
+  display: block;
+  object-fit: contain;
+  z-index: 7;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  opacity: 0.95;
 }
+.game-container .flecha.I { 
+  left: 12px;
+ }
+.game-container .flecha.d {
+   right: 12px; 
+  }
+.game-container .flecha:hover { 
+  transform: translateY(-50%) scale(1.06);
+   opacity: 1; }
+
+
+.escena {
+   display: none; 
+  margin: 0 auto;
+   text-align: center; 
+  }
+.escena.activa { 
+  display: block;
+ }
+
+
+.escenas-wrapper {
+   position: relative; 
+  width: 750px; }
+
+
+.btn-anterior,
+.btn-siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 9;
+}
+.btn-anterior { 
+  left: -18px; 
+}
+.btn-siguiente {
+   right: -18px; 
+  }
+.btn-anterior:hover, .btn-siguiente:hover { 
+  background: rgba(0,0,0,0.7); 
+}
+
+
+.miniaturas { display: flex; 
+  justify-content: center; gap: 10px; 
+  margin-top: 12px; 
+}
+.miniatura { 
+  width: 120px; 
+  height: 80px; 
+  object-fit: cover; 
+  cursor: pointer; 
+  border: 3px solid transparent; 
+  border-radius: 6px; 
+}
+
+.miniatura.active { 
+  border-color: #ffd400;
+ }
+
+
+
+@media (max-width: 800px) 
+{
+  .game-container, .background { width: 95vw; 
+    height: calc(95vw * 500/750); }
+}
+
 
 
 
