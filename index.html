@@ -1,77 +1,67 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Póster interactivo</title>
-<link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvel Rivals | Official Website</title>
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
-
-<div class="escenas-wrapper">
-  <div class="game-container section1 escena">
-  <img src="/juego flapi/fondo.webp" class="background" alt="Fondo 1">
-  <img src="/juego flapi/hongo.png" class="hongo animable" alt="hongo">
-  <img src="/juego flapi/luigi.webp" class="luigi animable" alt="luigi">
-  <img src="/juego flapi/cuadro2.png" class="bloque clickable bloque-a" alt="Bloque A">
-  <img src="/juego flapi/cuadro3.png" class="bloque clickable bloque-b" alt="Bloque B">
-  <img src="/juego flapi/cuadro4.png" class="bloque clickable bloque-c" alt="Bloque C">
-  <img src="/juego flapi/bloque.png" class="bloque clickable bloque-d" alt="Bloque D">
-
-  <div class="score-board">Puntaje: <span class="score">0</span></div>
-  </div>
-
-  <div class="game-container section2 escena">
-  <img src="/juego flapi/fondo1.png" class="background" alt="Fondo 2">
-  <img src="/juego flapi/muñeco.webp" class="muñeco animable" alt="muñeco">
-  <img src="/juego flapi/muñeca.webp" class="muñeca animable" alt="muñeca">
+ 
+  <header class="navbar">
+    <div class="logo">MITONIC <span></span></div>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Personajes</a>
+      <a href="#">Noticias</a>
+      <a href="#">Comunidad</a>
+      <a href="#" class="btn">Descargar</a>
+    </nav>
+  </header>
 
   
-  <img src="/juego flapi/diamante1.png" class="diamante1 diamante2" alt="diamante1">
-  <img src="/juego flapi/diamante2.png" class="diamante2 clickable diamante2" alt="diamante2">
-  <img src="/juego flapi/cuadro2.png" class="conoo clickable conoo-3" alt="Cono 3">
-  <img src="/juego flapi/cuadro4.png" class="conoo clickable conoo-4" alt="Cono 4">
-
-  <div class="score-board">SCORE: <span class="score">0</span></div>
-  </div>
-
-  <div class="game-container section3 escena">
-  <img src="/juego flapi/fondo3.webp" class="background" alt="Fondo 3">
-  <img src="/juego flapi/wudi.png" class="cubo animable" alt="Cubo">
-  <img src="/juego flapi/buzz.webp" class="chuzos animable" alt="Chuzos">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>ADRIAN Y LAS CRONICAS DEL IMPERIO</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore ab eaque, nostrum atque ad excepturi, sint quia rerum, id minima iusto distinctio. Voluptas deleniti, deserunt earum modi porro excepturi.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary">VER CAPITULOS</a>
+        <a href="#" class="btn secondary">Ver Tráiler</a>
+      </div>
+    </div>
+  </section>
 
   
-  <img src="/juego flapi/corazon.png" class="rollito clickable roll-1" alt="Rollito 1">
-  <img src="/juego flapi/corazon2.png" class="rollito clickable roll-2" alt="Rollito 2">
-  <img src="/juego flapi/estrella3.png" class="rollito clickable roll-3" alt="Rollito 3">
-  <img src="/juego flapi/estrella.png" class="rollito clickable roll-4" alt="Rollito 4">
-
-  <div class="score-board">POINTS: <span class="score">0</span></div>
-  </div>
-
-  
-  <button class="btn-anterior" aria-label="Anterior">‹</button>
-  <button class="btn-siguiente" aria-label="Siguiente">›</button>
-
-  
-  <div class="miniaturas">
-    <img src="/juego flapi/fondo.webp" class="miniatura" data-index="0" alt="Mini 1">
-    <img src="/juego flapi/fondo1.png" class="miniatura" data-index="1" alt="Mini 2">
-    <img src="/juego flapi/fondo3.webp" class="miniatura" data-index="2" alt="Mini 3">
-  </div>
-
-</div>
+  <section class="characters">
+    <h2>Elige a tu Personaje</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="" alt="ADRIAN">
+        <h3>ADRIAN</h3>
+      </div>
+      <div class="card">
+        <img src="" alt="MONJE">
+        <h3>MONJE</h3>
+      </div>
+      <div class="card">
+        <img src="" alt="SENADOR">
+        <h3>SENADOR</h3>
+      </div>
+      
+    </div>
+  </section>
 
 
-
-
-<script src="juego.js"></script>
-
+  <footer class="footer">
+    <p>© 2025 MITONI.TODOS LOS DERECHOS RESERVADOS</p>
+  </footer>
 
 </body>
 </html>
-
-
-
-
