@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MITONIC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">MITONIC <span></span></div>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Personajes</a>
+      <a href="#">Noticias</a>
+      <a href="#">Comunidad</a>
+      <a href="#" class="btn">Descargar</a>
+    </nav>
+
+
+    <video 
+      class="video-responsive"
+      src="/video.mp3"
+      autoplay 
+      muted 
+      loop 
+      controls>
+    </video>
+    
+<p class="video-desc">
+  Este video muestra una vista previa del proyecto MITONIC.
+</p>
+    <script>
+  const video = document.querySelector(".video-responsive");
+
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+</script>
+
+
+  </header>
+  
+<script src="js.js"></script>
+</body>
+</html>

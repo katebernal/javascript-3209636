@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color:#A67B5B;
+  color: #fff;    
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: #A67B5B;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo span {
+  color: #A67B5B;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0e0d0d;
+}
+
+.nav-links .btn {
+  background: #111111;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #0e0d0d;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  margin: 0 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+}
+.navbar {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  flex-wrap: wrap;          
+  gap: 20px;             
+}
+
+.video-responsive {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.video-desc {
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.9;
+}
