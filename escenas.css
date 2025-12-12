@@ -1,0 +1,69 @@
+/* --- SECCIÓN PERSONAJES INDEX (CUADROS VERTICALES) --- */
+
+#listaPersonajesIndex {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta */
+#listaPersonajesIndex .card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    height: 280px;          /* Vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #333;
+    transition: .3s ease;
+    animation: aparecer-personajes .8s ease forwards;
+}
+
+/* Hover PRO */
+#listaPersonajesIndex .card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+/* Imagen vertical */
+#listaPersonajesIndex .card img {
+    width: 100%;
+    height: 200px;      /* Imagen alta */
+    object-fit: cover;  /* No deforma */
+    border-radius: 8px;
+    background: black;
+    transition: .3s;
+}
+
+/* Brillo suave en imagen */
+#listaPersonajesIndex .card img:hover {
+    filter: brightness(1.15);
+}
+
+/* Títulos */
+#listaPersonajesIndex .card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Animación de entrada */
+@keyframes aparecer-personajes {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    #listaPersonajesIndex .card {
+        height: 250px;
+    }
+    #listaPersonajesIndex .card img {
+        height: 170px;
+    }
+}
+
+
