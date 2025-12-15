@@ -1,0 +1,360 @@
+/* =========================
+   BODY PRINCIPAL
+   ========================= */
+body {
+  min-height: 100vh;              /* Altura mínima de toda la pantalla */
+  display: flex;                  /* Usa flexbox */
+  flex-direction: column;         /* Elementos en columna */
+  justify-content: center;        /* Centrado vertical */
+  align-items: center;            /* Centrado horizontal */
+  gap: 15px;                      /* Espacio entre elementos */
+  background: radial-gradient(circle at top, #222, #000); /* Fondo degradado */
+}
+
+
+/* =========================
+   BOTÓN BIENVENIDA
+   ========================= */
+.btn-bienvenida {
+  padding: 12px 30px;                         /* Tamaño del botón */
+  background: linear-gradient(135deg, gold, orange); /* Degradado dorado */
+  border: none;
+  border-radius: 30px;                        /* Bordes redondeados */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;                            /* Manito al pasar mouse */
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.6); /* Brillo */
+}
+
+/* Efecto hover del botón */
+.btn-bienvenida:hover {
+  transform: scale(1.05); /* Crece un poco */
+}
+
+
+/* =========================
+   CARRUSEL
+   ========================= */
+.carousel {
+  overflow: hidden;   /* Oculta lo que se sale */
+  width: 100%;
+  height: 300px;
+}
+
+/* Contenedor de imágenes */
+.slides {
+  display: flex;
+  animation: slide 12s infinite; /* Animación automática */
+}
+
+/* Imágenes del carrusel */
+.slides img {
+  width: 100%;
+  object-fit: cover; /* No se deforman */
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+}
+
+
+/* =========================
+   GRID DE TARJETAS
+   ========================= */
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Tarjeta individual */
+.card {
+  background: #222;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   MENÚ / NAVBAR
+   ========================= */
+.menu {
+  display: flex;
+  justify-content: space-between; /* Logo a la izquierda, links a la derecha */
+  align-items: center;
+  padding: 15px 40px;
+  background: #000;
+}
+
+/* Lista del menú */
+.menu ul {
+  list-style: none; /* Quita puntos */
+  display: flex;
+  gap: 20px;
+}
+
+/* Links del menú */
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  color: white;
+}
+
+
+/* =========================
+   HERO (SECCIÓN PRINCIPAL)
+   ========================= */
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Brillo al texto */
+}
+
+.hero {
+  min-height: 100vh;              /* Pantalla completa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero con imagen y overlay oscuro */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+
+  /* Oscurece la imagen */
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.75)),
+    url("image.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   BOTÓN HERO
+   ========================= */
+.btn-bienvenida {
+  padding: 16px 44px;
+  background: linear-gradient(135deg, #ffcc00, #ff9500);
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f1e1e;
+  text-decoration: none;
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-bienvenida:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255, 180, 0, 1);
+}
+
+
+/* =========================
+   MENÚ FIJO
+   ========================= */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px); /* Efecto glass */
+  z-index: 1000;
+}
+
+/* Logo menú */
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Lista menú */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Links menú */
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   RESET GENERAL
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   CARRUSEL FULLSCREEN
+   ========================= */
+.carousel,
+.carrusel,
+.carrousel {
+  width: 100%;
+  height: calc(100vh - 140px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor imágenes */
+.slides {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Imágenes */
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   SLIDE INDIVIDUAL
+   ========================= */
+.slide {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Oscurecer imagen */
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+
+/* =========================
+   TEXTO SOBRE SLIDE
+   ========================= */
+.slide-content {
+  position: absolute;
+  left: 6%;
+  bottom: 20%;
+  max-width: 600px;
+  color: white;
+  z-index: 2;
+}
+
+.slide-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.slide-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTONES DEL SLIDE
+   ========================= */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.btn.primary {
+  background: #f1e204;
+  color: black;
+}
+
+.btn.primary:hover {
+  background: #f5af0c;
+}
+
+/* Botón secundario */
+.btn.secondary {
+  border: 2px solid #ece801;
+  color: #c9a44a;
+}
+
+.btn.secondary:hover {
+  background: #e76c06;
+  color: black;
+}
