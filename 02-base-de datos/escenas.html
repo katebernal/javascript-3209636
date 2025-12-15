@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8">
+
+  <!-- Título de la pestaña -->
+  <title>Escenas | MITONIC</title>
+
+  <!-- Archivo CSS de estilos -->
+  <link rel="stylesheet" href="escenas.css">
+</head>
+<body>
+
+  <!-- =========================
+       MENÚ / NAVBAR
+       ========================= -->
+  <nav class="menu">
+    <!-- Logo -->
+    <h2 class="logo">MITONIC</h2>
+
+    <!-- Links de navegación -->
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="personajes.html">Personajes</a></li>
+      <li><a href="escenas.html" class="active">Escenas</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- =========================
+       SECCIÓN ESCENAS
+       ========================= -->
+  <section class="escenas">
+
+    <!-- Título principal -->
+    <h1>Escenas</h1>
+
+    <!-- Grid de escenas -->
+    <div class="grid">
+
+      <!-- =========================
+           TARJETA DE ESCENA
+           ========================= -->
+      <div class="escena-card" 
+        data-video="romano.mp4"
+        data-title="La Cueva del Imperio">
+
+        <!-- Imagen previa de la escena -->
+        <img src="lampp.png">
+
+        <!-- Título de la escena -->
+        <p>La Cueva del Imperio</p>
+      </div>
+
+
+      <!-- =========================
+           TARJETA DE ESCENA
+           (con video dentro)
+           ========================= -->
+      <div class="escena-card" 
+        data-video="romano.mp4"
+        data-title="La Cueva del Imperio">
+
+        <!-- Imagen previa -->
+        <img src="ers.png">
+
+        <!-- Video embebido (se muestra en la tarjeta) -->
+        <video src="romano2.mp4" controls></video>
+
+        <!-- Título de la escena -->
+        <p>El Templo Antiguo</p>
+      </div>
+
+
+      <!-- =========================
+           TARJETA DE ESCENA
+           ========================= -->
+      <div class="escena-card"
+        data-video="romano3.mp4"
+        data-title="El Consejo Final">
+
+        <!-- Imagen previa -->
+        <img src="imperioromano.png">
+
+        <!-- Título -->
+        <p>El Consejo Final</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       MODAL DE VIDEO
+       ========================= -->
+  <div class="modal" id="modal">
+
+    <!-- Botón cerrar (X) -->
+    <span class="close">&times;</span>
+
+    <!-- Video que se carga dinámicamente -->
+    <video id="modalVideo" controls></video>
+
+    <!-- Título del video -->
+    <h2 id="modalTitle"></h2>
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer>
+    © 2025 MITONIC. Todos los derechos reservados.
+  </footer>
+
+  <script src="escenas.js"></script>
+
+</body>
+</html>
