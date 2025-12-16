@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8">
+
+  <!-- Título de la pestaña -->
+  <title>Escenas | MITONIC</title>
+
+  <!-- Archivo CSS de estilos -->
+  <link rel="stylesheet" href="escenas.css">
+</head>
+<body>
+
+  <!-- =========================
+       MENÚ / NAVBAR
+       ========================= -->
+  <nav class="menu">
+    <!-- Logo -->
+    <h2 class="logo">MITONIC</h2>
+
+    <!-- Links de navegación -->
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="personajes.html">Personajes</a></li>
+      <li><a href="escenas.html" class="active">Escenas</a></li>
+    </ul>
+  </nav>
+
+
+  
+<section class="escenas">
+  <h1>Escenas</h1>
+
+<div id="escenas-container" class="grid"></div>
+</section>
+
+<!-- Modal del video -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <video id="modalVideo" controls></video>
+  <h2 id="modalTitle"></h2>
+</div>
+
+<script src="bd.js"></script>
+<script src="escenas.js"></script>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer>
+    © 2025 MITONIC. Todos los derechos reservados.
+  </footer>
+</body>
+</html>

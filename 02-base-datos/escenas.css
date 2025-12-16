@@ -1,0 +1,190 @@
+/* =========================
+   RESET GENERAL
+   ========================= */
+* {
+  margin: 0;                     /* Quita márgenes por defecto */
+  padding: 0;                    /* Quita relleno por defecto */
+  box-sizing: border-box;        /* Tamaños más predecibles */
+  font-family: Arial, sans-serif;/* Fuente general */
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+body {
+  background: #000;  /* Fondo negro */
+  color: white;      /* Texto blanco */
+}
+
+
+/* =========================
+   NAVBAR / MENÚ
+   ========================= */
+.menu {
+  display: flex;                    /* Flexbox */
+  justify-content: space-between;   /* Logo izquierda / links derecha */
+  align-items: center;              /* Centrado vertical */
+  padding: 15px 40px;               /* Espaciado interno */
+  background: black;                /* Fondo negro */
+}
+
+/* Lista de links */
+.menu ul {
+  display: flex;
+  list-style: none;                 /* Quita puntos */
+  gap: 30px;                        /* Espacio entre links */
+}
+
+/* Links del menú */
+.menu a {
+  color: white;
+  text-decoration: none;            /* Quita subrayado */
+}
+
+/* Link activo */
+.menu a.active {
+  color: gold;                      /* Página actual */
+}
+
+
+/* =========================
+   SECCIÓN ESCENAS
+   ========================= */
+.escenas {
+  padding: 60px;        /* Espacio interno */
+  text-align: center;   /* Texto centrado */
+}
+
+/* Título principal */
+.escenas h1 {
+  margin-bottom: 40px;  /* Espacio abajo */
+  font-size: 40px;      /* Tamaño grande */
+}
+
+
+/* =========================
+   GRID DE ESCENAS
+   ========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+
+  /* Se adapta automáticamente al tamaño de pantalla */
+  gap: 10px; /* Espacio entre tarjetas */
+}
+
+
+/* =========================
+   TARJETA DE ESCENA
+   ========================= */
+.escena-card {
+  cursor: pointer;                    /* Indica que se puede clickear */
+  transition: transform 0.3s ease;    /* Animación suave */
+}
+
+/* Imagen de la escena */
+.escena-card img {
+  width: 100%;
+  border-radius: 10px;                /* Bordes redondeados */
+}
+
+/* Efecto hover */
+.escena-card:hover {
+  transform: scale(1.05);             /* Zoom suave */
+}
+
+/* Texto debajo de la imagen */
+.escena-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   MODAL (VIDEO EN GRANDE)
+   ========================= */
+.modal {
+  display: none;                /* Oculto por defecto */
+  position: fixed;              /* Se queda fijo en pantalla */
+  inset: 0;                     /* Ocupa toda la pantalla */
+  background: rgba(0,0,0,0.9);  /* Fondo oscuro */
+  justify-content: center;      /* Centrado horizontal */
+  align-items: center;          /* Centrado vertical */
+  flex-direction: column;       /* Elementos en columna */
+  z-index: 1000;                /* Encima de todo */
+}
+
+/* Video dentro del modal */
+.modal video {
+  max-width: 80%;               /* Máximo ancho */
+  max-height: 70%;              /* Máxima altura */
+  border-radius: 10px;
+}
+
+/* Título del video */
+.modal h2 {
+  margin-top: 20px;
+}
+
+/* Botón cerrar (X) */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  margin-top: 60px;
+}
+
+.contenedor-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  overflow-x: auto;     /* scroll horizontal */
+  padding: 20px;
+}
+
+.card {
+  flex: 0 0 auto;       /* evita que bajen */
+  width: 220px;
+
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card p {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+
+
+
+
